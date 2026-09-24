@@ -1,4 +1,4 @@
-QT += core gui widgets network
+QT += core gui widgets network sql
 
 TARGET = TestControl
 TEMPLATE = app

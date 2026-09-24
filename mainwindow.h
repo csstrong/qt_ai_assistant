@@ -12,6 +12,10 @@
 #include <QActionGroup>
 #include <QLayout>
 
+class QHBoxLayout;
+class QListWidget;
+class QTableWidget;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -30,7 +34,7 @@ private:
     void setupUI();
     void setupMqtt();
     void applyStyle();
-    void addFunctionPage(const QString &name, QWidget *page);
+    void addFunctionPage(const QString &name, QWidget *page, QMenu *menu, bool showStatus);
 
     // 页面构建
     QWidget *createEmptyPage();
@@ -38,12 +42,16 @@ private:
     QWidget *createMonitorPage();
     QWidget *createSettingsPage();
     QWidget *createAboutPage();
+    QWidget *createSqlitePage();
+    QWidget *createMysqlPage();
+    QWidget *createDmPage();
 
     // 通用构建辅助（前端风格卡片）
     QWidget *makeCard(const QString &title, QLayout *body);
     QWidget *makeStatCard(const QString &title, const QString &value, const QString &accent);
     QWidget *makeEmptyCard(const QString &title, const QString &hint);
     QWidget *makeFormRow(const QString &title, const QString &value);
+    QHBoxLayout *makeTableBrowser(const QString &connName, QListWidget **listOut, QTableWidget **tableOut);
 
     QMqttClient *m_client;
     QStackedWidget *m_stack;
