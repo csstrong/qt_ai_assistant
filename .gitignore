@@ -1,0 +1,116 @@
+# ===== 构建产物 =====
+build/
+build-*/
+debug/
+release/
+bin/
+obj/
+*.o
+*.obj
+*.so
+*.so.*
+*.dylib
+*.dll
+*.a
+*.lib
+*.exe
+*.app
+*.out
+
+# ===== Qt 特有 =====
+# qmake 生成
+Makefile
+Makefile.*
+*.pro.user
+*.pro.user.*
+.qmake.stash
+*.qmake.stash
+
+# CMake 生成
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CMakeUserPresets.json
+*.cmake.stamp
+
+# Qt Creator
+*.autosave
+*.user
+*.user.*
+CMakeLists.txt.user
+CMakeLists.txt.user.*
+
+# Qt 自动生成
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.moc
+
+# ===== 编译中间文件 =====
+*.gch
+*.pch
+*.ilk
+*.pdb
+*.idb
+*.exp
+*.map
+
+# ===== IDE / 编辑器 =====
+# Visual Studio
+.vs/
+*.suo
+*.sln.docstates
+*.vcxproj.user
+*.vcxproj.filters
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/launch.json
+
+# CLion
+.idea/
+*.iml
+
+# CLion / JetBrains
+*.iws
+*.ipr
+
+# ===== 平台相关 =====
+# macOS
+.DS_Store
+*.dSYM/
+*.dSYM
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.directory
+
+# ===== 依赖 / 包管理 =====
+node_modules/
+*.log
+*.tmp
+
+# ===== 部署 / 打包 =====
+# windeployqt / macdeployqt 输出
+*.dmg
+*.pkg
+*.deb
+*.rpm
+*.AppImage
+
+# ===== 环境 / 配置 =====
+.env
+.env.local
+*.local
+
+# ===== 其他 =====
+*.bak
+*.orig
+*.rej
